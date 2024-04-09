@@ -211,7 +211,7 @@ Title.Text = "Infinite Yield FE for Wave v" .. currentVersion
 
 do
 	local emoji = ({
-		["01 01"] = "??",
+		["01 01"] = "🎆",
 		[(function(Year)
 			local A = math.floor(Year/100)
 			local B = math.floor((13+8*A)/25)
@@ -228,9 +228,9 @@ do
 				return ("04 %02d"):format(G-31)
 			end
 			return ("03 %02d"):format(G)
-		end)(tonumber(os.date"%Y"))] = "??",
-		["10 31"] = "??",
-		["12 25"] = "??"
+		end)(tonumber(os.date"%Y"))] = "🥚",
+		["10 31"] = "🎃",
+		["12 25"] = "🎄"
 	})[os.date("%m %d")]
 	if emoji then
 		Title.Text = ("%s %s %s"):format(emoji, Title.Text, emoji)
@@ -2574,11 +2574,11 @@ eventEditor = (function()
 	end
 
 	local function saveData()
-		print("save")
+
 	end
 
 	local function loadData(str)
-		print("load")
+
 	end
 
 	local function addCmd(event,data)
